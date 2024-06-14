@@ -65,25 +65,25 @@ class block_jumbotron_blog extends block_base {
 
             // Generate the HTML content
             $this->content->text = <<<HTML
-                    <section class="blog_front_hero-main">
-                      <div class="blog_front_hero-container">
-                        <article class="blog_front_hero-content">
-                          <div class="blog_front_hero-article">
-                            <div class="blog_front_hero-meta">
-                              <span class="blog_front_hero-newest">Newest Blog</span>
-                              <time class="blog_front_hero-date" datetime="$date">$days Days ago</time>
-                            </div>
-                            <h2 class="blog_front_hero-title">$title</h2>
-                            <p class="blog_front_hero-description">$intro</p>
-                            <a class="blog_front_hero-read-more" href="$url">Read Article</a>
-                          </div>
-                        </article>
-                        <div class="blog_front_hero-content-wrapper">
-                          <img class="blog_front_hero-blog-image-large" src="$latestpost->image_url" alt="$title" loading="lazy">
-                        </div>
-                      </div>
-                    </section>
-                    HTML;
+<section class="blog_front_hero-main">
+  <div class="blog_front_hero-container">
+    <article class="blog_front_hero-content">
+      <div class="blog_front_hero-article">
+        <div class="blog_front_hero-meta">
+          <span class="blog_front_hero-newest">Newest Blog</span>
+          <time class="blog_front_hero-date" datetime="$date">$days Days ago</time>
+        </div>
+        <h2 class="blog_front_hero-title">$title</h2>
+        <p class="blog_front_hero-description">$intro</p>
+        <a class="blog_front_hero-read-more" href="$url">Read Article</a>
+      </div>
+    </article>
+    <div class="blog_front_hero-content-wrapper">
+      <img class="blog_front_hero-blog-image-large" src="$latestpost->image_url" alt="$title" loading="lazy">
+    </div>
+  </div>
+</section>
+HTML;
         } else {
             $this->content->text = get_string('noblogposts', 'block_jumbotron_blog');
         }
